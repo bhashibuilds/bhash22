@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhashini — Cloud & Data Engineer</title>
+  <title>bhashibuilds — Platform & Infrastructure</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,47 +14,114 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">bhashibuilds</a>
+      <a href="#hero" class="nav-logo">bhashi<em>builds</em></a>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#architecture">Architecture</a></li>
-        <li><a href="#books">Books</a></li>
-        <li><a href="#experience" class="nav-btn">Resume</a></li>
-        <li><a href="#fun" class="nav-btn nav-btn-secondary">Fun Stuff</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#fun">Beyond</a></li>
       </ul>
+      <div class="nav-social">
+        <a href="mailto:your@email.com" class="social-link">email</a>
+        <a href="https://github.com/bhashibuilds" target="_blank" class="social-link">github</a>
+        <a href="https://linkedin.com" target="_blank" class="social-link">linkedin</a>
+      </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-container">
-      <aside class="books-sidebar">
-        <p class="books-label">📚 Tech books<br>I'm reading now</p>
-        <div class="books-stack">
-          <div class="book-chip">
-            <span class="book-icon">📖</span>
-            <span>Designing Data-Intensive Applications</span>
-          </div>
-          <div class="book-chip">
-            <span class="book-icon">📖</span>
-            <span>Site Reliability Engineering</span>
-          </div>
-          <div class="book-chip">
-            <span class="book-icon">📖</span>
-            <span>The Art of Computer Systems</span>
-          </div>
-        </div>
-      </aside>
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="status-dot"></span>
+        Platform engineer · Infrastructure
+      </div>
+      <h1 class="hero-title">
+        Building <em>infrastructure</em><br>
+        that runs <em>itself.</em>
+      </h1>
+      <p class="hero-desc">
+        I design and operate platforms where reliability is a feature, not an afterthought.
+        Kubernetes orchestration, observability pipelines, deployment automation, and the
+        unglamorous SRE work that keeps production humming at 3am.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag">platform engineering</span>
+        <span class="hero-tag">site reliability</span>
+        <span class="hero-tag">cloud automation</span>
+        <span class="hero-tag">observability</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="container">
-        <p class="hero-greeting">Hey, I'm Bhashini 👋</p>
-        <h1 class="hero-title">Building scalable systems<br>that move data at scale.</h1>
-        <p class="hero-desc">Cloud infrastructure · Kubernetes · Data engineering · System design</p>
-        <div class="hero-links">
-          <a href="mailto:your@email.com" class="btn-outline">Email</a>
-          <a href="https://github.com/bhashibuilds" target="_blank" class="btn-outline">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" class="btn-outline">LinkedIn</a>
+  <!-- HIGHLIGHTS: BOOKS + CERTS -->
+  <section class="highlights">
+    <div class="container">
+      <div class="highlights-grid">
+
+        <!-- BOOKSHELF -->
+        <div class="highlight-card">
+          <div class="card-label">
+            <span class="card-icon">📚</span>
+            <span>tech books I'm reading</span>
+          </div>
+          <div class="bookshelf">
+            <div class="shelf-book" style="--height: 90%; --shade: 1;">
+              <span class="book-spine">DDIA</span>
+            </div>
+            <div class="shelf-book" style="--height: 78%; --shade: 2;">
+              <span class="book-spine">Google SRE</span>
+            </div>
+            <div class="shelf-book" style="--height: 95%; --shade: 3;">
+              <span class="book-spine">The Phoenix Project</span>
+            </div>
+            <div class="shelf-book" style="--height: 82%; --shade: 4;">
+              <span class="book-spine">Kubernetes Patterns</span>
+            </div>
+            <div class="shelf-book" style="--height: 88%; --shade: 5;">
+              <span class="book-spine">Accelerate</span>
+            </div>
+          </div>
+          <p class="card-footer">Designing Data-Intensive Apps · Google SRE · The Phoenix Project · Kubernetes Patterns · Accelerate</p>
         </div>
+
+        <!-- CERT WALL -->
+        <div class="highlight-card">
+          <div class="card-label">
+            <span class="card-icon">🏆</span>
+            <span>trophy wall</span>
+          </div>
+          <div class="trophy-wall">
+            <div class="trophy">
+              <div class="trophy-badge">
+                <span class="badge-text">AWS</span>
+              </div>
+              <p class="trophy-name">Solutions Architect</p>
+              <p class="trophy-meta">Associate · 2024</p>
+            </div>
+            <div class="trophy">
+              <div class="trophy-badge">
+                <span class="badge-text">CKA</span>
+              </div>
+              <p class="trophy-name">Kubernetes Admin</p>
+              <p class="trophy-meta">CNCF · in progress</p>
+            </div>
+            <div class="trophy">
+              <div class="trophy-badge trophy-badge-empty">
+                <span class="badge-text">+</span>
+              </div>
+              <p class="trophy-name">Terraform Associate</p>
+              <p class="trophy-meta">HashiCorp · planned</p>
+            </div>
+            <div class="trophy">
+              <div class="trophy-badge trophy-badge-empty">
+                <span class="badge-text">+</span>
+              </div>
+              <p class="trophy-name">GCP Professional</p>
+              <p class="trophy-meta">Cloud Architect · planned</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -62,8 +129,8 @@
   <!-- PROJECTS -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-desc">Real work with real impact. Each project has a live link, docs, and a write-up.</p>
+      <h2 class="section-title">Selected <em>work</em></h2>
+      <p class="section-desc">Infrastructure and platform projects, with full docs.</p>
 
       <div class="projects-grid">
 
@@ -80,307 +147,256 @@
             Built a fault-tolerant streaming pipeline processing 10M+ events/day using Kafka, Flink, and Parquet. Deployed on EKS with autoscaling and observability via Prometheus + Grafana.
           </p>
           <div class="project-links">
-            <a href="#" class="link">Live Project →</a>
-            <a href="#" class="link">Documentation →</a>
-            <a href="#" class="link">Write-up →</a>
+            <a href="#" class="link">Project ↗</a>
+            <a href="#" class="link">Docs ↗</a>
+            <a href="#" class="link">Write-up ↗</a>
           </div>
         </article>
 
         <article class="project-item">
           <div class="project-header">
-            <h3 class="project-name">Cloud-Native Analytics Platform</h3>
+            <h3 class="project-name">Self-Healing Kubernetes Platform</h3>
             <div class="project-meta">
-              <span class="tag">GCP</span>
-              <span class="tag">dbt</span>
-              <span class="tag">BigQuery</span>
+              <span class="tag">Platform</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">ArgoCD</span>
             </div>
           </div>
           <p class="project-desc">
-            Designed a modern data stack on GCP with Airflow orchestration, dbt transformations, and Looker dashboards. Handles nightly batch processing for 100+ stakeholders across 3 orgs.
+            Built an opinionated Kubernetes platform with GitOps, automated rollbacks, and policy enforcement. Devs ship 10× faster with zero incidents from misconfigs.
           </p>
           <div class="project-links">
-            <a href="#" class="link">Live Project →</a>
-            <a href="#" class="link">Documentation →</a>
-            <a href="#" class="link">Write-up →</a>
+            <a href="#" class="link">Project ↗</a>
+            <a href="#" class="link">Docs ↗</a>
+            <a href="#" class="link">Write-up ↗</a>
           </div>
         </article>
 
         <article class="project-item">
           <div class="project-header">
-            <h3 class="project-name">Zero-Downtime Deployment System</h3>
+            <h3 class="project-name">Zero-Downtime Deployment Engine</h3>
             <div class="project-meta">
               <span class="tag">CI/CD</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Monitoring</span>
+              <span class="tag">Automation</span>
+              <span class="tag">SRE</span>
             </div>
           </div>
           <p class="project-desc">
-            Automated blue-green deployments with health checks, canary traffic, and instant rollbacks. Reduced deploy time from 40 min to 5 min and MTTR from 20 min to 2 min.
+            Automated blue-green deployments with health gates, canary traffic, and instant rollbacks. Reduced deploy time from 40min → 5min and MTTR from 20min → 2min.
           </p>
           <div class="project-links">
-            <a href="#" class="link">Live Project →</a>
-            <a href="#" class="link">Documentation →</a>
-            <a href="#" class="link">Write-up →</a>
+            <a href="#" class="link">Project ↗</a>
+            <a href="#" class="link">Docs ↗</a>
+            <a href="#" class="link">Write-up ↗</a>
           </div>
         </article>
+
+        <!-- PROJECT LIBRARY (Bookshelf Card) -->
+        <a href="project-library.html" class="library-card">
+          <div class="library-shelf">
+            <div class="library-book lb-1"><span>k8s</span></div>
+            <div class="library-book lb-2"><span>aws</span></div>
+            <div class="library-book lb-3"><span>tf</span></div>
+            <div class="library-book lb-4"><span>argo</span></div>
+            <div class="library-book lb-5"><span>helm</span></div>
+            <div class="library-book lb-6"><span>obs</span></div>
+            <div class="library-book lb-7"><span>sre</span></div>
+          </div>
+          <div class="library-info">
+            <h3 class="library-title">Project Library <em>→</em></h3>
+            <p class="library-desc">Browse the full catalog of side projects, experiments, and learning exercises.</p>
+          </div>
+        </a>
 
       </div>
     </div>
   </section>
 
-  <!-- ARCHITECTURE -->
-  <section class="section bg-dark" id="architecture">
+  <!-- DOCS / WRITING -->
+  <section class="section section-alt" id="docs">
     <div class="container">
-      <h2 class="section-title">Architecture Thinking</h2>
-      <p class="section-desc">How I approach system design and infrastructure problems.</p>
+      <h2 class="section-title">Documentation &amp; <em>writing</em></h2>
+      <p class="section-desc">Notes, postmortems, and deep dives on platform engineering, SRE, and infrastructure.</p>
 
-      <div class="arch-grid">
-
-        <article class="arch-card">
-          <h4 class="arch-title">Scalability First</h4>
-          <p>
-            I design systems assuming they'll 10x in load tomorrow. This means horizontal scaling, stateless services, and distributed architectures. Key principles: no single points of failure, asynchronous over synchronous, and caching at every layer.
-          </p>
-          <div class="arch-example">
-            <strong>Example:</strong> Using Kafka + Flink for event streams instead of direct DB writes ensures the pipeline survives traffic spikes and allows backpressure handling.
-          </div>
-        </article>
-
-        <article class="arch-card">
-          <h4 class="arch-title">Observability Built-In</h4>
-          <p>
-            You can't manage what you can't measure. Every service gets structured logging, distributed tracing, and metrics from day one. This isn't an afterthought—it's baked into the architecture.
-          </p>
-          <div class="arch-example">
-            <strong>Example:</strong> OpenTelemetry instrumentation across all services feeds into Prometheus + Grafana. Alerts trigger before users notice issues.
-          </div>
-        </article>
-
-        <article class="arch-card">
-          <h4 class="arch-title">Cost as a Constraint</h4>
-          <p>
-            Cloud resources cost money. I design with cost efficiency in mind: spot instances for batch jobs, reserved capacity for base load, and automated shutdown for idle resources. Cheap architecture that doesn't run is not cheap.
-          </p>
-          <div class="arch-example">
-            <strong>Example:</strong> Karpenter + spot instances reduced our EKS bill by 40% while maintaining SLOs.
-          </div>
-        </article>
-
-        <article class="arch-card">
-          <h4 class="arch-title">Infrastructure as Code</h4>
-          <p>
-            Terraform/Pulumi over clicking consoles. Every resource is versioned, reviewed, and reproducible. IaC is how we prevent config drift and enable fast, safe deployments.
-          </p>
-          <div class="arch-example">
-            <strong>Example:</strong> Terraform modules let us spin up prod-like environments in minutes, enabling faster testing and disaster recovery.
-          </div>
-        </article>
-
-        <article class="arch-card">
-          <h4 class="arch-title">Data Consistency Tradeoffs</h4>
-          <p>
-            Not all data needs to be perfectly consistent. I think about CAP theorem, eventual consistency patterns, and when idempotency saves you. Trade latency for throughput where appropriate.
-          </p>
-          <div class="arch-example">
-            <strong>Example:</strong> Using event sourcing for the event stream lets us replay history and rebuild state, while materialized views serve eventual consistency to the API layer.
-          </div>
-        </article>
-
-        <article class="arch-card">
-          <h4 class="arch-title">Fail Fast, Learn Faster</h4>
-          <p>
-            Design systems that fail visibly and loudly. Circuit breakers, timeouts, and bulkheads prevent cascading failures. Chaos engineering catches the surprises you didn't anticipate.
-          </p>
-          <div class="arch-example">
-            <strong>Example:</strong> Service timeouts at 2s prevent one slow dependency from bringing down the entire platform.
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- BOOKS -->
-  <section class="section" id="books">
-    <div class="container">
-      <h2 class="section-title">Currently Reading</h2>
-      <p class="section-desc">Books that shaped how I think about systems, teams, and tech.</p>
-
-      <div class="books-list">
-
-        <article class="book-item">
-          <div class="book-header">
-            <h4 class="book-title">Designing Data-Intensive Applications</h4>
-            <p class="book-author">Martin Kleppmann</p>
-          </div>
-          <p class="book-thoughts">
-            The bible for any data engineer. Deep dives into distributed systems concepts—consistency models, replication, partitioning, transactions. I reference this constantly. The chapters on stream processing and consensus algorithms are pure gold.
-          </p>
-          <div class="book-status">Currently on: Chapter 8</div>
-        </article>
-
-        <article class="book-item">
-          <div class="book-header">
-            <h4 class="book-title">Site Reliability Engineering</h4>
-            <p class="book-author">Google</p>
-          </div>
-          <p class="book-thoughts">
-            How Google runs production systems at scale. Changed my perspective on error budgets, on-call culture, and postmortems. The SLI/SLO framework is invaluable. If you care about reliability, read this.
-          </p>
-          <div class="book-status">Completed ✓</div>
-        </article>
-
-        <article class="book-item">
-          <div class="book-header">
-            <h4 class="book-title">The Art of Computer Systems Performance Analysis</h4>
-            <p class="book-author">Raj Jain</p>
-          </div>
-          <p class="book-thoughts">
-            Statistical rigor for performance work. Most perf analysis is hand-wavy; this book teaches you how to actually measure and reason about systems. Dense but worth it.
-          </p>
-          <div class="book-status">Currently on: Chapter 5</div>
-        </article>
-
-        <article class="book-item">
-          <div class="book-header">
-            <h4 class="book-title">The Mythical Man-Month</h4>
-            <p class="book-author">Fred Brooks</p>
-          </div>
-          <p class="book-thoughts">
-            A classic on software project management. Written in 1975 but still relevant—Brooks' Law ("adding people to a late project makes it later") still holds. Great perspective on system design and team dynamics.
-          </p>
-          <div class="book-status">Completed ✓</div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section bg-dark" id="experience">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="experience-timeline">
-
-        <article class="exp-item">
-          <div class="exp-header">
-            <h4 class="exp-title">Cloud Infrastructure Engineer (Intern)</h4>
-            <span class="exp-date">Summer 2024</span>
-          </div>
-          <p class="exp-company">Company Name · Remote</p>
-          <ul class="exp-bullets">
-            <li>Automated provisioning of EKS clusters with Terraform, cutting setup time by 60%</li>
-            <li>Built Grafana dashboards tracking latency, error rates, and pod health across 50+ services</li>
-            <li>Wrote runbooks and alert policies adopted by the on-call rotation</li>
-            <li>Optimized Kubernetes resource requests, reducing cloud costs by $5K/month</li>
-          </ul>
-        </article>
-
-        <article class="exp-item">
-          <div class="exp-header">
-            <h4 class="exp-title">Data Engineering Intern</h4>
-            <span class="exp-date">Fall 2023</span>
-          </div>
-          <p class="exp-company">Company Name · Hybrid</p>
-          <ul class="exp-bullets">
-            <li>Designed and deployed Airflow DAGs for nightly batch pipelines processing 5GB+ daily</li>
-            <li>Migrated legacy SQL transformations to dbt with full test coverage and documentation</li>
-            <li>Reduced pipeline failure rate from 12% to &lt;1% through better error handling and alerting</li>
-            <li>Built data quality tests that caught 3 production issues before they hit dashboards</li>
-          </ul>
-        </article>
-
-      </div>
-
-      <div class="exp-download">
-        <p>Want the full resume?</p>
-        <a href="/resume.pdf" class="btn-solid">Download Resume (PDF)</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="section" id="certs">
-    <div class="container">
-      <h2 class="section-title">Certifications</h2>
-
-      <div class="certs-list">
-        <div class="cert-badge">
-          <span class="cert-icon">☁️</span>
-          <div>
-            <h5>AWS Certified Solutions Architect – Associate</h5>
-            <p>Amazon Web Services · Issued 2024 · <a href="#">Verify</a></p>
-          </div>
+      <div class="docs-controls">
+        <div class="docs-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="kubernetes">Kubernetes</button>
+          <button class="filter-btn" data-filter="aws">AWS</button>
+          <button class="filter-btn" data-filter="sre">SRE</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+          <button class="filter-btn" data-filter="observability">Observability</button>
         </div>
-
-        <div class="cert-badge">
-          <span class="cert-icon">⚙️</span>
-          <div>
-            <h5>Kubernetes Application Developer (CKAD)</h5>
-            <p>Linux Foundation · In progress</p>
-          </div>
-        </div>
-
-        <div class="cert-badge">
-          <span class="cert-icon">📊</span>
-          <div>
-            <h5>Add your next cert here</h5>
-            <p>Your organization · Expected date</p>
-          </div>
+        <div class="docs-sort">
+          <button class="sort-btn active" data-sort="date">Latest</button>
+          <button class="sort-btn" data-sort="topic">By topic</button>
         </div>
       </div>
+
+      <div class="docs-list">
+
+        <a href="#" class="doc-item" data-tags="kubernetes aws" data-date="2024-05">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Kubernetes</span><span>AWS</span></div>
+            <h4>Reducing EKS costs by 40% with Karpenter</h4>
+            <p>Node provisioning, spot instances, and right-sizing in production.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">May 2024</span>
+            <span class="doc-read">8 min</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="sre observability" data-date="2024-04">
+          <div class="doc-content">
+            <div class="doc-tags"><span>SRE</span><span>Observability</span></div>
+            <h4>SLOs that don't lie: error budgets in practice</h4>
+            <p>How we built honest SLIs and got product to actually use them.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">Apr 2024</span>
+            <span class="doc-read">12 min</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="automation kubernetes" data-date="2024-03">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Automation</span><span>Kubernetes</span></div>
+            <h4>GitOps with ArgoCD: lessons from production</h4>
+            <p>Why GitOps changed how we ship and the pitfalls nobody mentions.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">Mar 2024</span>
+            <span class="doc-read">10 min</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="observability sre" data-date="2024-02">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Observability</span><span>SRE</span></div>
+            <h4>The alert that saved production at 2am</h4>
+            <p>A real incident: what we monitored, what we missed, what we changed.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">Feb 2024</span>
+            <span class="doc-read">7 min</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="automation aws" data-date="2024-01">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Automation</span><span>AWS</span></div>
+            <h4>Terraform modules that actually scale</h4>
+            <p>Multi-env, multi-team org structure without losing your mind.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">Jan 2024</span>
+            <span class="doc-read">15 min</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="kubernetes automation" data-date="2023-12">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Kubernetes</span><span>Automation</span></div>
+            <h4>Zero-downtime deploys: blue-green vs canary</h4>
+            <p>When to use what, with real config examples and failure modes.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">Dec 2023</span>
+            <span class="doc-read">9 min</span>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
 
-  <!-- FUN STUFF -->
-  <section class="section bg-dark" id="fun">
+  <!-- BEYOND CODE -->
+  <section class="section" id="fun">
     <div class="container">
-      <h2 class="section-title">Beyond Code</h2>
+      <h2 class="section-title">Beyond <em>code</em></h2>
       <p class="section-desc">The stuff I do when I'm not shipping infrastructure.</p>
 
       <div class="fun-grid">
 
         <article class="fun-card">
-          <h4>🎮 Gaming & Speedrunning</h4>
-          <p>
-            Competitive gamer with a passion for speedrunning. I love the problem-solving aspect—breaking games down to their core mechanics, finding optimizations, and pushing the boundaries of what's possible. Started a speedrunning community at university with 200+ members.
-          </p>
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>🎮 Gaming &amp; Speedrunning</h4>
+          <p>Competitive gaming with a soft spot for speedrunning. Love the problem-solving — breaking games down, finding optimizations, pushing limits.</p>
         </article>
 
         <article class="fun-card">
-          <h4>🏔️ Climbing & Hiking</h4>
-          <p>
-            Rock climbing and mountain hiking on weekends. There's something meditative about being outside, and I love the problem-solving aspect of route-finding and technical climbing. Summited 5 peaks above 14K ft last year.
-          </p>
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #2a2a2a, #1a1a1a);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>🏔️ Climbing &amp; Hiking</h4>
+          <p>Rock climbing and mountain hiking on weekends. There's something meditative about being outside and the puzzle-solving of route-finding.</p>
         </article>
 
         <article class="fun-card">
-          <h4>✍️ Writing & Essays</h4>
-          <p>
-            Write essays about tech, systems thinking, and careers on my blog. Enjoy synthesizing complex ideas into clear explanations. Currently working on a series about distributed systems for beginners.
-          </p>
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #1a1a1a, #333);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>✍️ Essays &amp; Writing</h4>
+          <p>Write essays about tech, systems thinking, and careers. Enjoy synthesizing complex ideas into clear explanations.</p>
         </article>
 
         <article class="fun-card">
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #333, #1a1a1a);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
           <h4>🎵 Music Production</h4>
-          <p>
-            Dabble in electronic music production (Ableton). No formal training, but I love the process of layering sounds and finding the right arrangement. It's like debugging code but with vibes.
-          </p>
+          <p>Dabbling in electronic music production (Ableton). No formal training — just layering sounds and chasing the right arrangement.</p>
         </article>
 
         <article class="fun-card">
-          <h4>🍕 Cooking & Coffee</h4>
-          <p>
-            Amateur home chef who loves experimenting with new cuisines. Recently got into specialty coffee—I have a small home setup for espresso and pour-over brewing. Also make pizza in a wood-fired oven.
-          </p>
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #2a2a2a, #404040);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>☕ Coffee &amp; Cooking</h4>
+          <p>Specialty coffee at home — espresso, pour-over, the whole rabbit hole. Cook a lot too, currently obsessed with sourdough.</p>
         </article>
 
         <article class="fun-card">
-          <h4>📚 Philosophy & Stoicism</h4>
-          <p>
-            Interested in philosophy, particularly Stoicism and how ancient ideas apply to modern life. The concept of focusing on what you can control resonates deeply with how I approach work and systems design.
-          </p>
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #404040, #1a1a1a);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>📚 Philosophy &amp; Stoicism</h4>
+          <p>Reading philosophy, especially Stoicism. The "focus on what you can control" idea maps surprisingly well to systems design.</p>
+        </article>
+
+        <article class="fun-card">
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>🎨 Pixel Art</h4>
+          <p>Make pixel art occasionally — game sprites, tiny icons, retro vibes. Slower than coding but uses the same problem-solving muscle.</p>
+        </article>
+
+        <article class="fun-card">
+          <div class="fun-img-wrap">
+            <div class="fun-img" style="background-image: linear-gradient(135deg, #2a2a2a, #1a1a1a);">
+              <span class="fun-img-label">add photo</span>
+            </div>
+          </div>
+          <h4>🌱 Side Projects</h4>
+          <p>Always tinkering with something — homelab experiments, Raspberry Pi builds, weird automation projects.</p>
         </article>
 
       </div>
@@ -390,12 +406,8 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>Crafted by hand. <a href="https://github.com/bhashibuilds/bhash22" target="_blank">View source</a></p>
-      <div class="footer-links">
-        <a href="https://github.com/bhashibuilds" target="_blank">GitHub</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="mailto:your@email.com">Email</a>
-      </div>
+      <p>Built by hand · <a href="https://github.com/bhashibuilds/bhash22" target="_blank">view source</a></p>
+      <p class="footer-tag">© 2024 bhashibuilds</p>
     </div>
   </footer>
 

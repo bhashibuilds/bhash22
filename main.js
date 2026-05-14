@@ -1,23 +1,54 @@
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+// ── Docs filter ──
+const filterButtons = document.querySelectorAll('.filter-btn');
+const docItems = document.querySelectorAll('.doc-item');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.style.color = link.getAttribute('href') === `#${entry.target.id}`
-          ? 'var(--text)'
-          : '';
-      });
-    }
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    docItems.forEach(item => {
+      const tags = item.dataset.tags || '';
+      if (filter === 'all' || tags.includes(filter)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
   });
-}, { threshold: 0.4 });
+});
 
-sections.forEach(s => observer.observe(s));
+// ── Docs sort ──
+const sortButtons = document.querySelectorAll('.sort-btn');
+const docsList = document.querySelector('.docs-list');
 
-// Fade-in on scroll
-const fadeEls = document.querySelectorAll('.project-card, .writing-card, .cert-card, .timeline-item, .stack-group');
+sortButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    sortButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const sort = btn.dataset.sort;
+    const items = Array.from(docsList.querySelectorAll('.doc-item'));
+
+    items.sort((a, b) => {
+      if (sort === 'date') {
+        return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+      }
+      if (sort === 'topic') {
+        const aTag = (a.dataset.tags || '').split(' ')[0];
+        const bTag = (b.dataset.tags || '').split(' ')[0];
+        return aTag.localeCompare(bTag);
+      }
+      return 0;
+    });
+
+    items.forEach(item => docsList.appendChild(item));
+  });
+});
+
+// ── Subtle fade-in on scroll ──
+const fadeEls = document.querySelectorAll('.project-item, .library-card, .doc-item, .fun-card, .highlight-card');
 
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -27,11 +58,11 @@ const fadeObserver = new IntersectionObserver((entries) => {
       fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
 fadeEls.forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(18px)';
+  el.style.transform = 'translateY(12px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   fadeObserver.observe(el);
 });

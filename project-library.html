@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Library — bhashibuilds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">bhashi<em>builds</em></a>
+      <ul class="nav-links">
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#docs">Docs</a></li>
+        <li><a href="index.html#fun">Beyond</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="mailto:your@email.com" class="social-link">email</a>
+        <a href="https://github.com/bhashibuilds" target="_blank" class="social-link">github</a>
+        <a href="https://linkedin.com" target="_blank" class="social-link">linkedin</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 80px;">
+    <div class="container">
+      <a href="index.html" class="link" style="margin-bottom: 24px; display: inline-block;">← Back home</a>
+      <h2 class="section-title">Project <em>Library</em></h2>
+      <p class="section-desc">The full catalog — side projects, experiments, weekend builds, and learning exercises.</p>
+
+      <div class="docs-controls">
+        <div class="docs-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="kubernetes">Kubernetes</button>
+          <button class="filter-btn" data-filter="aws">AWS</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+          <button class="filter-btn" data-filter="data">Data</button>
+          <button class="filter-btn" data-filter="homelab">Homelab</button>
+        </div>
+      </div>
+
+      <div class="docs-list">
+
+        <a href="#" class="doc-item" data-tags="kubernetes automation">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Kubernetes</span><span>Automation</span></div>
+            <h4>Mini-PaaS on a Raspberry Pi cluster</h4>
+            <p>4-node k3s cluster running my personal projects with full GitOps.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">2024</span>
+            <span class="doc-read">live</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="automation aws">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Automation</span><span>AWS</span></div>
+            <h4>Auto-scaling bot for AWS spot instances</h4>
+            <p>Predictive scaling using spot prices and historical workload patterns.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">2024</span>
+            <span class="doc-read">archived</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="homelab">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Homelab</span></div>
+            <h4>Self-hosted observability stack</h4>
+            <p>Grafana + Loki + Tempo + Prometheus on a single mini-PC.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">2024</span>
+            <span class="doc-read">live</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="data automation">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Data</span><span>Automation</span></div>
+            <h4>Personal analytics dashboard</h4>
+            <p>Pipeline ingesting fitness, finance, and reading data into a unified view.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">2023</span>
+            <span class="doc-read">live</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="kubernetes">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Kubernetes</span></div>
+            <h4>Custom k8s admission controller</h4>
+            <p>Validates resource limits and enforces team-level policies.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">2023</span>
+            <span class="doc-read">github</span>
+          </div>
+        </a>
+
+        <a href="#" class="doc-item" data-tags="automation">
+          <div class="doc-content">
+            <div class="doc-tags"><span>Automation</span></div>
+            <h4>Slack bot for on-call rotations</h4>
+            <p>PagerDuty integration with handoff reminders and incident notes.</p>
+          </div>
+          <div class="doc-aside">
+            <span class="doc-date">2023</span>
+            <span class="doc-read">github</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand · <a href="https://github.com/bhashibuilds/bhash22" target="_blank">view source</a></p>
+      <p class="footer-tag">© 2024 bhashibuilds</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
