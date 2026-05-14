@@ -6,131 +6,101 @@
   <title>Bhashini — Cloud & Data Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav">
-    <span class="nav-logo">bhashibuilds</span>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#certs">Certs</a></li>
-    </ul>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">bhashibuilds</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#experience" class="nav-btn">Resume</a></li>
+        <li><a href="#fun" class="nav-btn nav-btn-secondary">Fun Stuff</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-inner">
-      <p class="hero-eyebrow">Hello, I'm Bhashini 👋</p>
-      <h1 class="hero-headline">I build scalable<br /><em>cloud and data systems.</em></h1>
-      <p class="hero-sub">Infrastructure · Kubernetes · Data Engineering · Cloud Architecture</p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="mailto:your@email.com" class="btn btn-ghost">Get in touch</a>
+    <div class="container">
+      <p class="hero-greeting">Hey, I'm Bhashini 👋</p>
+      <h1 class="hero-title">Building scalable systems<br>that move data at scale.</h1>
+      <p class="hero-desc">Cloud infrastructure · Kubernetes · Data engineering · System design</p>
+      <div class="hero-links">
+        <a href="mailto:your@email.com" class="btn-outline">Email</a>
+        <a href="https://github.com/bhashibuilds" target="_blank" class="btn-outline">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" class="btn-outline">LinkedIn</a>
       </div>
     </div>
-    <div class="hero-orb"></div>
   </section>
 
   <!-- PROJECTS -->
   <section class="section" id="projects">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Main work</span>
-        <h2 class="section-title">Projects</h2>
-      </div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-desc">Real work with real impact. Each project has a live link, docs, and a write-up.</p>
 
-      <div class="project-list">
+      <div class="projects-grid">
 
-        <!-- Project 1 -->
-        <article class="project-card">
-          <div class="project-meta">
-            <span class="project-tag">Kubernetes · AWS · Terraform</span>
-            <span class="project-year">2024</span>
-          </div>
-          <h3 class="project-title">Distributed Data Pipeline on EKS</h3>
-          <p class="project-desc">
-            Built a fault-tolerant streaming data pipeline processing 10M+ events/day using Kafka, Flink, and S3. Deployed on EKS with autoscaling and full observability via Prometheus + Grafana.
-          </p>
-          <div class="architecture-box">
-            <p class="arch-label">Architecture</p>
-            <div class="arch-flow">
-              <span class="arch-node">Kafka</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Flink</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">S3 / Parquet</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Athena</span>
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-name">Distributed Data Pipeline on EKS</h3>
+            <div class="project-meta">
+              <span class="tag">Kubernetes</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Kafka</span>
             </div>
-            <p class="arch-detail">EKS cluster · Terraform IaC · Helm charts · HPA autoscaling · Dead-letter queues</p>
           </div>
+          <p class="project-desc">
+            Built a fault-tolerant streaming pipeline processing 10M+ events/day using Kafka, Flink, and Parquet. Deployed on EKS with autoscaling and observability via Prometheus + Grafana.
+          </p>
           <div class="project-links">
-            <a href="#" class="link-pill">GitHub →</a>
-            <a href="#" class="link-pill">Write-up →</a>
+            <a href="#" class="link">Live Project →</a>
+            <a href="#" class="link">Documentation →</a>
+            <a href="#" class="link">Write-up →</a>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="project-card">
-          <div class="project-meta">
-            <span class="project-tag">GCP · Airflow · dbt · BigQuery</span>
-            <span class="project-year">2024</span>
-          </div>
-          <h3 class="project-title">Cloud-Native Analytics Platform</h3>
-          <p class="project-desc">
-            Designed and deployed a modern data stack on GCP for batch analytics workloads. Orchestrated with Cloud Composer (Airflow), transformed with dbt, and served via Looker Studio dashboards.
-          </p>
-          <div class="architecture-box">
-            <p class="arch-label">Architecture</p>
-            <div class="arch-flow">
-              <span class="arch-node">Cloud Storage</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Airflow</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">dbt + BigQuery</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Looker</span>
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-name">Cloud-Native Analytics Platform</h3>
+            <div class="project-meta">
+              <span class="tag">GCP</span>
+              <span class="tag">dbt</span>
+              <span class="tag">BigQuery</span>
             </div>
-            <p class="arch-detail">CI/CD via Cloud Build · dbt tests · Cost governance · Partitioned tables</p>
           </div>
+          <p class="project-desc">
+            Designed a modern data stack on GCP with Airflow orchestration, dbt transformations, and Looker dashboards. Handles nightly batch processing for 100+ stakeholders across 3 orgs.
+          </p>
           <div class="project-links">
-            <a href="#" class="link-pill">GitHub →</a>
-            <a href="#" class="link-pill">Write-up →</a>
+            <a href="#" class="link">Live Project →</a>
+            <a href="#" class="link">Documentation →</a>
+            <a href="#" class="link">Write-up →</a>
           </div>
         </article>
 
-        <!-- Project 3 -->
-        <article class="project-card">
-          <div class="project-meta">
-            <span class="project-tag">Docker · CI/CD · Monitoring</span>
-            <span class="project-year">2023</span>
-          </div>
-          <h3 class="project-title">Zero-Downtime Deployment System</h3>
-          <p class="project-desc">
-            Implemented a blue-green deployment pipeline with automated rollback triggers, health checks, and Slack alerting. Reduced deploy time from 40 min to under 5 min.
-          </p>
-          <div class="architecture-box">
-            <p class="arch-label">Architecture</p>
-            <div class="arch-flow">
-              <span class="arch-node">GitHub Actions</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Docker Build</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Blue/Green</span>
-              <span class="arch-arrow">→</span>
-              <span class="arch-node">Rollback</span>
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-name">Zero-Downtime Deployment System</h3>
+            <div class="project-meta">
+              <span class="tag">CI/CD</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Monitoring</span>
             </div>
-            <p class="arch-detail">Canary traffic split · Prometheus health gates · Slack webhooks · MTTR < 2 min</p>
           </div>
+          <p class="project-desc">
+            Automated blue-green deployments with health checks, canary traffic, and instant rollbacks. Reduced deploy time from 40 min to 5 min and MTTR from 20 min to 2 min.
+          </p>
           <div class="project-links">
-            <a href="#" class="link-pill">GitHub →</a>
-            <a href="#" class="link-pill">Write-up →</a>
+            <a href="#" class="link">Live Project →</a>
+            <a href="#" class="link">Documentation →</a>
+            <a href="#" class="link">Write-up →</a>
           </div>
         </article>
 
@@ -138,159 +108,174 @@
     </div>
   </section>
 
-  <!-- WRITING -->
-  <section class="section section-alt" id="writing">
+  <!-- ARCHITECTURE -->
+  <section class="section bg-dark" id="architecture">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Thoughts & tutorials</span>
-        <h2 class="section-title">Technical Writing</h2>
+      <h2 class="section-title">Architecture Thinking</h2>
+      <p class="section-desc">How I approach system design and infrastructure problems.</p>
+
+      <div class="arch-grid">
+
+        <article class="arch-card">
+          <h4 class="arch-title">Scalability First</h4>
+          <p>
+            I design systems assuming they'll 10x in load tomorrow. This means horizontal scaling, stateless services, and distributed architectures. Key principles: no single points of failure, asynchronous over synchronous, and caching at every layer.
+          </p>
+          <div class="arch-example">
+            <strong>Example:</strong> Using Kafka + Flink for event streams instead of direct DB writes ensures the pipeline survives traffic spikes and allows backpressure handling.
+          </div>
+        </article>
+
+        <article class="arch-card">
+          <h4 class="arch-title">Observability Built-In</h4>
+          <p>
+            You can't manage what you can't measure. Every service gets structured logging, distributed tracing, and metrics from day one. This isn't an afterthought—it's baked into the architecture.
+          </p>
+          <div class="arch-example">
+            <strong>Example:</strong> OpenTelemetry instrumentation across all services feeds into Prometheus + Grafana. Alerts trigger before users notice issues.
+          </div>
+        </article>
+
+        <article class="arch-card">
+          <h4 class="arch-title">Cost as a Constraint</h4>
+          <p>
+            Cloud resources cost money. I design with cost efficiency in mind: spot instances for batch jobs, reserved capacity for base load, and automated shutdown for idle resources. Cheap architecture that doesn't run is not cheap.
+          </p>
+          <div class="arch-example">
+            <strong>Example:</strong> Karpenter + spot instances reduced our EKS bill by 40% while maintaining SLOs.
+          </div>
+        </article>
+
+        <article class="arch-card">
+          <h4 class="arch-title">Infrastructure as Code</h4>
+          <p>
+            Terraform/Pulumi over clicking consoles. Every resource is versioned, reviewed, and reproducible. IaC is how we prevent config drift and enable fast, safe deployments.
+          </p>
+          <div class="arch-example">
+            <strong>Example:</strong> Terraform modules let us spin up prod-like environments in minutes, enabling faster testing and disaster recovery.
+          </div>
+        </article>
+
+        <article class="arch-card">
+          <h4 class="arch-title">Data Consistency Tradeoffs</h4>
+          <p>
+            Not all data needs to be perfectly consistent. I think about CAP theorem, eventual consistency patterns, and when idempotency saves you. Trade latency for throughput where appropriate.
+          </p>
+          <div class="arch-example">
+            <strong>Example:</strong> Using event sourcing for the event stream lets us replay history and rebuild state, while materialized views serve eventual consistency to the API layer.
+          </div>
+        </article>
+
+        <article class="arch-card">
+          <h4 class="arch-title">Fail Fast, Learn Faster</h4>
+          <p>
+            Design systems that fail visibly and loudly. Circuit breakers, timeouts, and bulkheads prevent cascading failures. Chaos engineering catches the surprises you didn't anticipate.
+          </p>
+          <div class="arch-example">
+            <strong>Example:</strong> Service timeouts at 2s prevent one slow dependency from bringing down the entire platform.
+          </div>
+        </article>
+
       </div>
+    </div>
+  </section>
 
-      <div class="writing-grid">
+  <!-- BOOKS -->
+  <section class="section" id="books">
+    <div class="container">
+      <h2 class="section-title">Currently Reading</h2>
+      <p class="section-desc">Books that shaped how I think about systems, teams, and tech.</p>
 
-        <a href="#" class="writing-card">
-          <span class="writing-tag">Kubernetes</span>
-          <h4>How I reduced EKS costs by 40% with Karpenter</h4>
-          <p>A deep dive into node provisioning, spot instances, and right-sizing workloads in production.</p>
-          <span class="writing-read">Read article →</span>
-        </a>
+      <div class="books-list">
 
-        <a href="#" class="writing-card">
-          <span class="writing-tag">Data Engineering</span>
-          <h4>Building idempotent data pipelines with Airflow + dbt</h4>
-          <p>Patterns for safe retries, late-arriving data, and deterministic transformations at scale.</p>
-          <span class="writing-read">Read article →</span>
-        </a>
+        <article class="book-item">
+          <div class="book-header">
+            <h4 class="book-title">Designing Data-Intensive Applications</h4>
+            <p class="book-author">Martin Kleppmann</p>
+          </div>
+          <p class="book-thoughts">
+            The bible for any data engineer. Deep dives into distributed systems concepts—consistency models, replication, partitioning, transactions. I reference this constantly. The chapters on stream processing and consensus algorithms are pure gold.
+          </p>
+          <div class="book-status">Currently on: Chapter 8</div>
+        </article>
 
-        <a href="#" class="writing-card">
-          <span class="writing-tag">Cloud Architecture</span>
-          <h4>IaC from scratch: Terraform modules that actually scale</h4>
-          <p>How to structure Terraform for multi-env, multi-team orgs without going insane.</p>
-          <span class="writing-read">Read article →</span>
-        </a>
+        <article class="book-item">
+          <div class="book-header">
+            <h4 class="book-title">Site Reliability Engineering</h4>
+            <p class="book-author">Google</p>
+          </div>
+          <p class="book-thoughts">
+            How Google runs production systems at scale. Changed my perspective on error budgets, on-call culture, and postmortems. The SLI/SLO framework is invaluable. If you care about reliability, read this.
+          </p>
+          <div class="book-status">Completed ✓</div>
+        </article>
 
-        <a href="#" class="writing-card">
-          <span class="writing-tag">Observability</span>
-          <h4>The alert that saved production at 2am</h4>
-          <p>A real incident walkthrough: how good metrics + dashboards cut resolution time in half.</p>
-          <span class="writing-read">Read article →</span>
-        </a>
+        <article class="book-item">
+          <div class="book-header">
+            <h4 class="book-title">The Art of Computer Systems Performance Analysis</h4>
+            <p class="book-author">Raj Jain</p>
+          </div>
+          <p class="book-thoughts">
+            Statistical rigor for performance work. Most perf analysis is hand-wavy; this book teaches you how to actually measure and reason about systems. Dense but worth it.
+          </p>
+          <div class="book-status">Currently on: Chapter 5</div>
+        </article>
 
-        <a href="#" class="writing-card">
-          <span class="writing-tag">CI/CD</span>
-          <h4>Zero-downtime deploys: a practical guide</h4>
-          <p>Blue-green, canary, and feature flags — when to use what, with real config examples.</p>
-          <span class="writing-read">Read article →</span>
-        </a>
+        <article class="book-item">
+          <div class="book-header">
+            <h4 class="book-title">The Mythical Man-Month</h4>
+            <p class="book-author">Fred Brooks</p>
+          </div>
+          <p class="book-thoughts">
+            A classic on software project management. Written in 1975 but still relevant—Brooks' Law ("adding people to a late project makes it later") still holds. Great perspective on system design and team dynamics.
+          </p>
+          <div class="book-status">Completed ✓</div>
+        </article>
 
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="section" id="experience">
+  <section class="section bg-dark" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Where I've worked</span>
-        <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-timeline">
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <h4 class="exp-title">Cloud Infrastructure Engineer (Intern)</h4>
+            <span class="exp-date">Summer 2024</span>
+          </div>
+          <p class="exp-company">Company Name · Remote</p>
+          <ul class="exp-bullets">
+            <li>Automated provisioning of EKS clusters with Terraform, cutting setup time by 60%</li>
+            <li>Built Grafana dashboards tracking latency, error rates, and pod health across 50+ services</li>
+            <li>Wrote runbooks and alert policies adopted by the on-call rotation</li>
+            <li>Optimized Kubernetes resource requests, reducing cloud costs by $5K/month</li>
+          </ul>
+        </article>
+
+        <article class="exp-item">
+          <div class="exp-header">
+            <h4 class="exp-title">Data Engineering Intern</h4>
+            <span class="exp-date">Fall 2023</span>
+          </div>
+          <p class="exp-company">Company Name · Hybrid</p>
+          <ul class="exp-bullets">
+            <li>Designed and deployed Airflow DAGs for nightly batch pipelines processing 5GB+ daily</li>
+            <li>Migrated legacy SQL transformations to dbt with full test coverage and documentation</li>
+            <li>Reduced pipeline failure rate from 12% to &lt;1% through better error handling and alerting</li>
+            <li>Built data quality tests that caught 3 production issues before they hit dashboards</li>
+          </ul>
+        </article>
+
       </div>
 
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-body">
-            <div class="timeline-top">
-              <h4>Cloud Infrastructure Intern</h4>
-              <span class="timeline-period">Summer 2024</span>
-            </div>
-            <p class="timeline-company">Company Name · Remote</p>
-            <ul class="timeline-bullets">
-              <li>Automated provisioning of EKS clusters with Terraform, cutting setup time by 60%</li>
-              <li>Built monitoring dashboards in Grafana tracking latency, error rates, and pod health</li>
-              <li>Wrote runbooks and alert policies adopted by the on-call rotation</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>AWS</span><span>Terraform</span><span>Kubernetes</span><span>Grafana</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-body">
-            <div class="timeline-top">
-              <h4>Data Engineering Intern</h4>
-              <span class="timeline-period">Fall 2023</span>
-            </div>
-            <p class="timeline-company">Company Name · Hybrid</p>
-            <ul class="timeline-bullets">
-              <li>Designed and deployed Airflow DAGs for nightly batch pipelines processing 5GB+ daily</li>
-              <li>Migrated legacy SQL transformations to dbt with full test coverage</li>
-              <li>Reduced pipeline failure rate from 12% to &lt;1% through better error handling</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>Python</span><span>Airflow</span><span>dbt</span><span>BigQuery</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- STACK -->
-  <section class="section section-alt" id="stack">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Tools of the trade</span>
-        <h2 class="section-title">Stack</h2>
-      </div>
-
-      <div class="stack-grid">
-
-        <div class="stack-group">
-          <h5 class="stack-category">Cloud</h5>
-          <div class="stack-pills">
-            <span>AWS</span><span>GCP</span><span>Azure</span>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h5 class="stack-category">Containers & Orchestration</h5>
-          <div class="stack-pills">
-            <span>Kubernetes</span><span>Docker</span><span>Helm</span><span>Karpenter</span>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h5 class="stack-category">Data</h5>
-          <div class="stack-pills">
-            <span>Apache Kafka</span><span>Flink</span><span>Airflow</span><span>dbt</span><span>Spark</span>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h5 class="stack-category">Infrastructure as Code</h5>
-          <div class="stack-pills">
-            <span>Terraform</span><span>Pulumi</span><span>Ansible</span>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h5 class="stack-category">Observability</h5>
-          <div class="stack-pills">
-            <span>Prometheus</span><span>Grafana</span><span>Datadog</span><span>OpenTelemetry</span>
-          </div>
-        </div>
-
-        <div class="stack-group">
-          <h5 class="stack-category">Languages</h5>
-          <div class="stack-pills">
-            <span>Python</span><span>Go</span><span>Bash</span><span>SQL</span>
-          </div>
-        </div>
-
+      <div class="exp-download">
+        <p>Want the full resume?</p>
+        <a href="/resume.pdf" class="btn-solid">Download Resume (PDF)</a>
       </div>
     </div>
   </section>
@@ -298,31 +283,85 @@
   <!-- CERTIFICATIONS -->
   <section class="section" id="certs">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Credentials</span>
-        <h2 class="section-title">Certifications</h2>
+      <h2 class="section-title">Certifications</h2>
+
+      <div class="certs-list">
+        <div class="cert-badge">
+          <span class="cert-icon">☁️</span>
+          <div>
+            <h5>AWS Certified Solutions Architect – Associate</h5>
+            <p>Amazon Web Services · Issued 2024 · <a href="#">Verify</a></p>
+          </div>
+        </div>
+
+        <div class="cert-badge">
+          <span class="cert-icon">⚙️</span>
+          <div>
+            <h5>Kubernetes Application Developer (CKAD)</h5>
+            <p>Linux Foundation · In progress</p>
+          </div>
+        </div>
+
+        <div class="cert-badge">
+          <span class="cert-icon">📊</span>
+          <div>
+            <h5>Add your next cert here</h5>
+            <p>Your organization · Expected date</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="certs-grid">
+  <!-- FUN STUFF -->
+  <section class="section bg-dark" id="fun">
+    <div class="container">
+      <h2 class="section-title">Beyond Code</h2>
+      <p class="section-desc">The stuff I do when I'm not shipping infrastructure.</p>
 
-        <div class="cert-card">
-          <div class="cert-icon">☁️</div>
-          <div class="cert-body">
-            <p class="cert-issuer">Amazon Web Services</p>
-            <h4 class="cert-name">AWS Certified Solutions Architect – Associate</h4>
-            <p class="cert-date">Issued · 2024</p>
-          </div>
-          <a href="#" class="link-pill">Verify →</a>
-        </div>
+      <div class="fun-grid">
 
-        <div class="cert-card">
-          <div class="cert-icon">⚙️</div>
-          <div class="cert-body">
-            <p class="cert-issuer">Add your next cert here</p>
-            <h4 class="cert-name">Certified Kubernetes Administrator (CKA)</h4>
-            <p class="cert-date">In progress</p>
-          </div>
-        </div>
+        <article class="fun-card">
+          <h4>🎮 Gaming & Speedrunning</h4>
+          <p>
+            Competitive gamer with a passion for speedrunning. I love the problem-solving aspect—breaking games down to their core mechanics, finding optimizations, and pushing the boundaries of what's possible. Started a speedrunning community at university with 200+ members.
+          </p>
+        </article>
+
+        <article class="fun-card">
+          <h4>🏔️ Climbing & Hiking</h4>
+          <p>
+            Rock climbing and mountain hiking on weekends. There's something meditative about being outside, and I love the problem-solving aspect of route-finding and technical climbing. Summited 5 peaks above 14K ft last year.
+          </p>
+        </article>
+
+        <article class="fun-card">
+          <h4>✍️ Writing & Essays</h4>
+          <p>
+            Write essays about tech, systems thinking, and careers on my blog. Enjoy synthesizing complex ideas into clear explanations. Currently working on a series about distributed systems for beginners.
+          </p>
+        </article>
+
+        <article class="fun-card">
+          <h4>🎵 Music Production</h4>
+          <p>
+            Dabble in electronic music production (Ableton). No formal training, but I love the process of layering sounds and finding the right arrangement. It's like debugging code but with vibes.
+          </p>
+        </article>
+
+        <article class="fun-card">
+          <h4>🍕 Cooking & Coffee</h4>
+          <p>
+            Amateur home chef who loves experimenting with new cuisines. Recently got into specialty coffee—I have a small home setup for espresso and pour-over brewing. Also make pizza in a wood-fired oven.
+          </p>
+        </article>
+
+        <article class="fun-card">
+          <h4>📚 Philosophy & Stoicism</h4>
+          <p>
+            Interested in philosophy, particularly Stoicism and how ancient ideas apply to modern life. The concept of focusing on what you can control resonates deeply with how I approach work and systems design.
+          </p>
+        </article>
 
       </div>
     </div>
@@ -330,11 +369,11 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>Built with care · <a href="https://github.com/bhashibuilds/bhash22" target="_blank">Source</a></p>
+    <div class="container">
+      <p>Crafted by hand. <a href="https://github.com/bhashibuilds/bhash22" target="_blank">View source</a></p>
       <div class="footer-links">
         <a href="https://github.com/bhashibuilds" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
         <a href="mailto:your@email.com">Email</a>
       </div>
     </div>
