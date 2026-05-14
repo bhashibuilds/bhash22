@@ -759,11 +759,15 @@ em {
   display: flex;
   gap: 14px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding: 0;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding-bottom: 8px;
   margin: 0 -32px;
-  padding: 0 32px;
+  padding-left: 32px;
+  padding-right: 32px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -795,8 +799,10 @@ em {
   flex-direction: column;
   cursor: pointer;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   min-height: 160px;
   position: relative;
+  white-space: normal;
 }
 
 .idea-card:hover {
