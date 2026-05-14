@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhashini — Cloud & Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">bhashibuilds</span>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#certs">Certs</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Hello, I'm Bhashini 👋</p>
+      <h1 class="hero-headline">I build scalable<br /><em>cloud and data systems.</em></h1>
+      <p class="hero-sub">Infrastructure · Kubernetes · Data Engineering · Cloud Architecture</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="mailto:your@email.com" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-orb"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Main work</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="project-list">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Kubernetes · AWS · Terraform</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Distributed Data Pipeline on EKS</h3>
+          <p class="project-desc">
+            Built a fault-tolerant streaming data pipeline processing 10M+ events/day using Kafka, Flink, and S3. Deployed on EKS with autoscaling and full observability via Prometheus + Grafana.
+          </p>
+          <div class="architecture-box">
+            <p class="arch-label">Architecture</p>
+            <div class="arch-flow">
+              <span class="arch-node">Kafka</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Flink</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">S3 / Parquet</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Athena</span>
+            </div>
+            <p class="arch-detail">EKS cluster · Terraform IaC · Helm charts · HPA autoscaling · Dead-letter queues</p>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-pill">GitHub →</a>
+            <a href="#" class="link-pill">Write-up →</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">GCP · Airflow · dbt · BigQuery</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">Cloud-Native Analytics Platform</h3>
+          <p class="project-desc">
+            Designed and deployed a modern data stack on GCP for batch analytics workloads. Orchestrated with Cloud Composer (Airflow), transformed with dbt, and served via Looker Studio dashboards.
+          </p>
+          <div class="architecture-box">
+            <p class="arch-label">Architecture</p>
+            <div class="arch-flow">
+              <span class="arch-node">Cloud Storage</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Airflow</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">dbt + BigQuery</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Looker</span>
+            </div>
+            <p class="arch-detail">CI/CD via Cloud Build · dbt tests · Cost governance · Partitioned tables</p>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-pill">GitHub →</a>
+            <a href="#" class="link-pill">Write-up →</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="project-tag">Docker · CI/CD · Monitoring</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">Zero-Downtime Deployment System</h3>
+          <p class="project-desc">
+            Implemented a blue-green deployment pipeline with automated rollback triggers, health checks, and Slack alerting. Reduced deploy time from 40 min to under 5 min.
+          </p>
+          <div class="architecture-box">
+            <p class="arch-label">Architecture</p>
+            <div class="arch-flow">
+              <span class="arch-node">GitHub Actions</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Docker Build</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Blue/Green</span>
+              <span class="arch-arrow">→</span>
+              <span class="arch-node">Rollback</span>
+            </div>
+            <p class="arch-detail">Canary traffic split · Prometheus health gates · Slack webhooks · MTTR < 2 min</p>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-pill">GitHub →</a>
+            <a href="#" class="link-pill">Write-up →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section class="section section-alt" id="writing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Thoughts & tutorials</span>
+        <h2 class="section-title">Technical Writing</h2>
+      </div>
+
+      <div class="writing-grid">
+
+        <a href="#" class="writing-card">
+          <span class="writing-tag">Kubernetes</span>
+          <h4>How I reduced EKS costs by 40% with Karpenter</h4>
+          <p>A deep dive into node provisioning, spot instances, and right-sizing workloads in production.</p>
+          <span class="writing-read">Read article →</span>
+        </a>
+
+        <a href="#" class="writing-card">
+          <span class="writing-tag">Data Engineering</span>
+          <h4>Building idempotent data pipelines with Airflow + dbt</h4>
+          <p>Patterns for safe retries, late-arriving data, and deterministic transformations at scale.</p>
+          <span class="writing-read">Read article →</span>
+        </a>
+
+        <a href="#" class="writing-card">
+          <span class="writing-tag">Cloud Architecture</span>
+          <h4>IaC from scratch: Terraform modules that actually scale</h4>
+          <p>How to structure Terraform for multi-env, multi-team orgs without going insane.</p>
+          <span class="writing-read">Read article →</span>
+        </a>
+
+        <a href="#" class="writing-card">
+          <span class="writing-tag">Observability</span>
+          <h4>The alert that saved production at 2am</h4>
+          <p>A real incident walkthrough: how good metrics + dashboards cut resolution time in half.</p>
+          <span class="writing-read">Read article →</span>
+        </a>
+
+        <a href="#" class="writing-card">
+          <span class="writing-tag">CI/CD</span>
+          <h4>Zero-downtime deploys: a practical guide</h4>
+          <p>Blue-green, canary, and feature flags — when to use what, with real config examples.</p>
+          <span class="writing-read">Read article →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Where I've worked</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-top">
+              <h4>Cloud Infrastructure Intern</h4>
+              <span class="timeline-period">Summer 2024</span>
+            </div>
+            <p class="timeline-company">Company Name · Remote</p>
+            <ul class="timeline-bullets">
+              <li>Automated provisioning of EKS clusters with Terraform, cutting setup time by 60%</li>
+              <li>Built monitoring dashboards in Grafana tracking latency, error rates, and pod health</li>
+              <li>Wrote runbooks and alert policies adopted by the on-call rotation</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>AWS</span><span>Terraform</span><span>Kubernetes</span><span>Grafana</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-top">
+              <h4>Data Engineering Intern</h4>
+              <span class="timeline-period">Fall 2023</span>
+            </div>
+            <p class="timeline-company">Company Name · Hybrid</p>
+            <ul class="timeline-bullets">
+              <li>Designed and deployed Airflow DAGs for nightly batch pipelines processing 5GB+ daily</li>
+              <li>Migrated legacy SQL transformations to dbt with full test coverage</li>
+              <li>Reduced pipeline failure rate from 12% to &lt;1% through better error handling</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>Airflow</span><span>dbt</span><span>BigQuery</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section section-alt" id="stack">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Tools of the trade</span>
+        <h2 class="section-title">Stack</h2>
+      </div>
+
+      <div class="stack-grid">
+
+        <div class="stack-group">
+          <h5 class="stack-category">Cloud</h5>
+          <div class="stack-pills">
+            <span>AWS</span><span>GCP</span><span>Azure</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h5 class="stack-category">Containers & Orchestration</h5>
+          <div class="stack-pills">
+            <span>Kubernetes</span><span>Docker</span><span>Helm</span><span>Karpenter</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h5 class="stack-category">Data</h5>
+          <div class="stack-pills">
+            <span>Apache Kafka</span><span>Flink</span><span>Airflow</span><span>dbt</span><span>Spark</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h5 class="stack-category">Infrastructure as Code</h5>
+          <div class="stack-pills">
+            <span>Terraform</span><span>Pulumi</span><span>Ansible</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h5 class="stack-category">Observability</h5>
+          <div class="stack-pills">
+            <span>Prometheus</span><span>Grafana</span><span>Datadog</span><span>OpenTelemetry</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h5 class="stack-category">Languages</h5>
+          <div class="stack-pills">
+            <span>Python</span><span>Go</span><span>Bash</span><span>SQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-body">
+            <p class="cert-issuer">Amazon Web Services</p>
+            <h4 class="cert-name">AWS Certified Solutions Architect – Associate</h4>
+            <p class="cert-date">Issued · 2024</p>
+          </div>
+          <a href="#" class="link-pill">Verify →</a>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">⚙️</div>
+          <div class="cert-body">
+            <p class="cert-issuer">Add your next cert here</p>
+            <h4 class="cert-name">Certified Kubernetes Administrator (CKA)</h4>
+            <p class="cert-date">In progress</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Built with care · <a href="https://github.com/bhashibuilds/bhash22" target="_blank">Source</a></p>
+      <div class="footer-links">
+        <a href="https://github.com/bhashibuilds" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>
+        <a href="mailto:your@email.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
