@@ -742,12 +742,12 @@ em {
 /* ── Startup Ideas (Carousel) ── */
 .ideas-section {
   background: #f8f6f2;
-  padding: 60px 0;
+  padding: 60px 32px;
 }
 
 .ideas-carousel-wrapper {
   position: relative;
-  padding: 0 32px;
+  max-width: 100%;
 }
 
 .ideas-carousel-header {
@@ -757,22 +757,20 @@ em {
 
 .ideas-carousel {
   display: flex;
+  align-items: flex-start;
   gap: 14px;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  flex-wrap: nowrap;
-  width: 100%;
-  padding-bottom: 8px;
-  margin: 0 -32px;
-  padding-left: 32px;
-  padding-right: 32px;
   -webkit-overflow-scrolling: touch;
+  padding: 0 0 12px 0;
+  margin: 0;
+  width: 100%;
+  min-height: auto;
 }
 
 .ideas-carousel::-webkit-scrollbar {
-  height: 6px;
+  height: 8px;
 }
 
 .ideas-carousel::-webkit-scrollbar-track {
@@ -781,7 +779,7 @@ em {
 
 .ideas-carousel::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .ideas-carousel::-webkit-scrollbar-thumb:hover {
@@ -789,20 +787,18 @@ em {
 }
 
 .idea-card {
-  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 280px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   transition: all 0.2s;
-  display: flex;
-  flex-direction: column;
   cursor: pointer;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 160px;
   position: relative;
-  white-space: normal;
 }
 
 .idea-card:hover {
@@ -859,9 +855,8 @@ em {
 
 .carousel-hint {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 32px;
+  top: 0;
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--text-mute);
